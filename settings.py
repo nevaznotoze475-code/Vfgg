@@ -32,7 +32,7 @@ def get_settings(path: str):
     env.read_env(path)
     return Settings(
         bot=BotConfig(
-            token=env.str("BOT_TOKEN"),
+            token=env.str("8189356827:AAFz5RM1NhYMf5ycn9STeSha2h1uqBRCC2E"),
             channel_id=env.int("CHANNEL_ID"),
             super_admin_id=env.int("SUPER_ADMIN_ID"),
             bot_enabled=env.bool("BOT_ENABLED"),
@@ -54,5 +54,6 @@ def get_settings(path: str):
 # Точно так же находим абсолютный путь к .env файлу
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(BASE_DIR, '.env')
+
 
 settings = get_settings(ENV_PATH)
